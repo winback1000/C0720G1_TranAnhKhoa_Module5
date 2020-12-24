@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/02_typescript/practice/bien_va_kieu_du_lieu/typescript-demo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/02_typescript/practice/test_typescript_project" vcs="Git" />
+  </component>
+</project>
