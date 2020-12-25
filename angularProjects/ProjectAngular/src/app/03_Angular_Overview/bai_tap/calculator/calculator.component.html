@@ -1,0 +1,30 @@
+<h2>Awesome Calculator</h2>
+<div class="col-lg-9">
+  <div class="col-lg-1 d-inline-block">
+    <input class="form-control" type="number"
+           [value]="first"
+           (change)="onFirstChange($event.target.value)">
+  </div>
+  <div class="col-lg-1 d-inline-block">
+    <select class="btn btn-primary" style="width: 60px" [value]="operator" (change)="onSelectChange($event.target.value)">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+  </div>
+  <div class= "col-lg-1 d-inline-block">
+    <input type="number" class="form-control ml-0"
+           [(ngModel)]="second">
+  </div>
+
+
+</div>
+<div>
+  <button class="btn btn-primary" (click)="calculate()">
+    Thực thi
+  </button>
+</div>
+<div class="output">
+  {{output}}
+</div>
