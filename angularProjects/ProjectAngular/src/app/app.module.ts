@@ -9,6 +9,11 @@ import { BootstrapComponent } from './03_Angular_Overview/thuc_hanh/bootstrap/bo
 import { CalculatorComponent } from './03_Angular_Overview/bai_tap/calculator/calculator.component';
 import {FormsModule} from "@angular/forms";
 import { ColorComponent } from './03_Angular_Overview/bai_tap/color/color.component';
+import { StudentManagementComponent } from './student-management/student-management.component';
+import { MatSliderModule } from '@angular/material/slider';
+import { DataTransferComponent } from './data-transfer/data-transfer.component';
+import { ChildComponent } from './data-transfer/child/child.component';
+import { StudentDetailComponent } from './student-management/student-detail/student-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +22,17 @@ import { ColorComponent } from './03_Angular_Overview/bai_tap/color/color.compon
     PetComponent,
     BootstrapComponent,
     CalculatorComponent,
-    ColorComponent
+    ColorComponent,
+    StudentManagementComponent,
+    DataTransferComponent,
+    ChildComponent,
+    StudentDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

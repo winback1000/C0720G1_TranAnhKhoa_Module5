@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="col-lg-9 d-inline float-left">
+    <h2>Student Management</h2>
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Mark</th>
+        <th scope="col">Age</th>
+        <th scope="col">Image</th>
+        <th scope="col">Result</th>
+        <th scope="col">Modify</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let student of studentList">
+        <th scope="row">{{student.id}}</th>
+        <td>{{student.name}}</td>
+        <td>{{student.mark}}</td>
+        <td>{{student.age}}</td>
+        <td><img [src]="student.image" class="img-thumbnail" style="height: 90px" [style.width.px]="student.size"></td>
+        <td><h3 *ngIf="student.mark>5; else failedCase" style="color: greenyellow; font-size: 30px">Pass</h3>
+          <ng-template #failedCase><h3  style="color: red; font-size: 30px">Failed</h3></ng-template>
+        </td>
+        <td>
+          <button class="btn btn-primary" (click)="getStudentDetail(student)">Detail</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div *ngIf="studentDetail" class="col-lg-3 d-inline float-left">
+    <app-student-detail [student]="studentDetail"></app-student-detail>
+  </div>
+
+</div>
+
+
+

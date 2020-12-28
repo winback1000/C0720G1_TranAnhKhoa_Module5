@@ -1,1 +1,63 @@
-<app-color></app-color>
+<body>
+<div>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="#">Welcome to Module 5</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/student-management">Student Management <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="exerciseDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Exercise
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="/calculator">Simple Calculator</a>
+            <!--          <a class="dropdown-item" href="#">Another action</a>-->
+            <!--          <div class="dropdown-divider"></div>-->
+            <!--          <a class="dropdown-item" href="#">Something else here</a>-->
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="practiceDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Practice
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLink="/color">Change Color</a>
+            <a class="dropdown-item" routerLink="/pet">Show pet Info</a>
+            <a class="dropdown-item" routerLink="/font-size">Change Font Size</a>
+            <a class="dropdown-item" routerLink="/child-parent-testing">Child Parent Testing</a>
+          </div>
+        </li>
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</div>
+<mat-slider min="1" max="100" step="1" value="1">test material</mat-slider>
+
+<!--<h1>Welcome to Module 5</h1>-->
+<!--<nav>-->
+<!--  <a class="btn btn-outline-primary" routerLink="/font-size">Change Font Size</a>-->
+<!--  <a class="btn btn-outline-primary" routerLink="/pet">Pet Info</a>-->
+<!--  <a class="btn btn-outline-primary" routerLink="/color">Change Color</a>-->
+<!--  <a class="btn btn-outline-primary" routerLink="/calculator">Simple Calculator</a>-->
+<!--  <a class="btn btn-outline-primary" routerLink="/student-management">Student Management</a>-->
+<!--</nav>-->
+<div>
+
+  <router-outlet></router-outlet>
+</div>
+
+</body>
+
+
