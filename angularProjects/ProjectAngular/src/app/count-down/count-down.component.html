@@ -1,0 +1,7 @@
+<h2>Please input the number of second to count</h2>
+
+<input type="number" [value]="countTime"  style="margin: 20px" (change)="changeCountTime($event.target.value)">
+<button class="btn btn-primary" (click)="startCount()">Start Count Down</button>
+<br>
+<app-remain-time [countTime]="countTime" *ngIf="start == true" (finish)="finishHandler($event)"></app-remain-time>
+<h3 *ngIf="message">{{message}}</h3>

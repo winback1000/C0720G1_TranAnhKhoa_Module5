@@ -17,6 +17,7 @@
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" routerLink="/calculator">Simple Calculator</a>
+            <a class="dropdown-item" routerLink="/count-down">Count Down App</a>
             <!--          <a class="dropdown-item" href="#">Another action</a>-->
             <!--          <div class="dropdown-divider"></div>-->
             <!--          <a class="dropdown-item" href="#">Something else here</a>-->
@@ -32,6 +33,9 @@
             <a class="dropdown-item" routerLink="/pet">Show pet Info</a>
             <a class="dropdown-item" routerLink="/font-size">Change Font Size</a>
             <a class="dropdown-item" routerLink="/child-parent-testing">Child Parent Testing</a>
+            <a class="dropdown-item" routerLink="/hacker-news">Hacker News</a>
+            <a class="dropdown-item" routerLink="/name-card">Name Card</a>
+            <a class="dropdown-item" routerLink="/progress-bar">Progress-bar</a>
           </div>
         </li>
 
@@ -45,16 +49,9 @@
 </div>
 <mat-slider min="1" max="100" step="1" value="1">test material</mat-slider>
 
-<!--<h1>Welcome to Module 5</h1>-->
-<!--<nav>-->
-<!--  <a class="btn btn-outline-primary" routerLink="/font-size">Change Font Size</a>-->
-<!--  <a class="btn btn-outline-primary" routerLink="/pet">Pet Info</a>-->
-<!--  <a class="btn btn-outline-primary" routerLink="/color">Change Color</a>-->
-<!--  <a class="btn btn-outline-primary" routerLink="/calculator">Simple Calculator</a>-->
-<!--  <a class="btn btn-outline-primary" routerLink="/student-management">Student Management</a>-->
-<!--</nav>-->
 <div>
-
+  <app-name-card *ngIf="isCardNameRoute()" cardName="Professional Dev" email="prodev@abc.xyz" phone="0123456789"></app-name-card>
+  <app-progress-bar *ngIf="isProgressBarRoute()" width="65"></app-progress-bar>
   <router-outlet></router-outlet>
 </div>
 

@@ -1,0 +1,8 @@
+  <div class="container-fluid">
+    <textarea class="form-control" style="margin: 20px 0" cols="40" [(ngModel)]="newArticle.title"></textarea>
+    <textarea class="form-control" style="margin: 20px 0" cols="100" [(ngModel)]="newArticle.url"></textarea>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary" (click)="updateArticle()" data-dismiss="modal">Save</button>
+  </div>

@@ -14,6 +14,13 @@ import { MatSliderModule } from '@angular/material/slider';
 import { DataTransferComponent } from './data-transfer/data-transfer.component';
 import { ChildComponent } from './data-transfer/child/child.component';
 import { StudentDetailComponent } from './student-management/student-detail/student-detail.component';
+import { HackernewsComponent } from './hackernews/hackernews.component';
+import { NewArticleComponent } from './hackernews/new-article/new-article.component';
+import { LikesComponent } from './hackernews/likes/likes.component';
+import { NameCardComponent } from './name-card/name-card.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { CountDownComponent } from './count-down/count-down.component';
+import { RemainTimeComponent } from './count-down/remain-time/remain-time.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +33,14 @@ import { StudentDetailComponent } from './student-management/student-detail/stud
     StudentManagementComponent,
     DataTransferComponent,
     ChildComponent,
-    StudentDetailComponent
+    StudentDetailComponent,
+    HackernewsComponent,
+    NewArticleComponent,
+    LikesComponent,
+    NameCardComponent,
+    ProgressBarComponent,
+    CountDownComponent,
+    RemainTimeComponent
   ],
   imports: [
     BrowserModule,
