@@ -7,7 +7,7 @@ import { ChangeFontSizeComponent } from './03_Angular_Overview/thuc_hanh/change-
 import {PetComponent} from "./03_Angular_Overview/thuc_hanh/pet/pet.component";
 import { BootstrapComponent } from './03_Angular_Overview/thuc_hanh/bootstrap/bootstrap.component';
 import { CalculatorComponent } from './03_Angular_Overview/bai_tap/calculator/calculator.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { ColorComponent } from './03_Angular_Overview/bai_tap/color/color.component';
 import { StudentManagementComponent } from './student-management/student-management.component';
 import { MatSliderModule } from '@angular/material/slider';
@@ -21,6 +21,10 @@ import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { CountDownComponent } from './count-down/count-down.component';
 import { RemainTimeComponent } from './count-down/remain-time/remain-time.component';
+import { TodoComponent } from './todo/todo.component';
+import { CreateStudentComponent } from './student-management/create-student/create-student.component';
+import { EditStudentComponent } from './student-management/edit-student/edit-student.component';
+import { DeleteStudentComponent } from './student-management/delete-student/delete-student.component';
 
 @NgModule({
   declarations: [
@@ -40,13 +44,18 @@ import { RemainTimeComponent } from './count-down/remain-time/remain-time.compon
     NameCardComponent,
     ProgressBarComponent,
     CountDownComponent,
-    RemainTimeComponent
+    RemainTimeComponent,
+    TodoComponent,
+    CreateStudentComponent,
+    EditStudentComponent,
+    DeleteStudentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MatSliderModule
+    MatSliderModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

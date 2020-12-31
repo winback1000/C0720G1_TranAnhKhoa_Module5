@@ -1,0 +1,46 @@
+<div style="margin: auto" class="col-lg-4">
+  <form [formGroup]="studentForm" (ngSubmit)="submitStudent()" novalidate>
+    <div class="form-group">
+      <label>Name</label>
+      <input
+       formControlName="name"
+        type="text" class="form-control" placeholder="name" >
+        <h6 *ngIf="studentForm.get('name').hasError('required') && studentForm.get('name').touched" style="color: red">Name is required</h6>
+        <h6 *ngIf="studentForm.get('name').hasError('maxLength') && studentForm.get('name').touched" style="color: red">Name is too long</h6>
+
+    </div>
+    <div class="form-group">
+      <label >Mark : {{tempMark}}</label>
+      <input
+        formControlName="mark"
+        type="range" min="0" max="10" class="form-control" placeholder="Student Mark" (change)="updateMark($event.target.value)">
+      <h6 *ngIf="studentForm.get('mark').hasError('required')  && studentForm.get('mark').touched" style="color: red">mark is required</h6>
+      <h6 *ngIf="studentForm.get('mark').hasError('min') && studentForm.get('mark').touched" style="color: red">Mark must be positive</h6>
+      <h6 *ngIf="studentForm.get('mark').hasError('max') && studentForm.get('mark').touched" style="color: red">Mark must be lower than 10</h6>
+
+    </div>
+    <div class="form-group">
+      <label >Age</label>
+      <input
+        formControlName="age"
+        type="number" class="form-control" placeholder="Student Age">
+      <h6 *ngIf="studentForm.get('age').hasError('required')  && studentForm.get('age').touched" style="color: red">Age is required</h6>
+      <h6 *ngIf="studentForm.get('age').hasError('min') && studentForm.get('age').touched" style="color: red">Age must be greater than 16</h6>
+      <h6 *ngIf="studentForm.get('age').hasError('max') && studentForm.get('age').touched" style="color: red">Age must be lower than 80</h6>
+
+    </div>
+    <div class="form-group">
+      <label >Image</label>
+      <input
+        formControlName="image"
+        type="text" class="form-control" placeholder="Student Image">
+      <h6 *ngIf="studentForm.get('image').hasError('required')  && studentForm.get('image').touched" style="color: red">Image is required</h6>
+
+    </div>
+    <div class="form-group">
+      <button class="btn btn-info" type="submit" style="margin: 20px" [disabled]="!studentForm.valid">Save</button>
+      <button class="btn btn-warning"  style="margin: 20px" routerLink="/student-management">Cancel</button>
+    </div>
+  </form>
+</div>
+

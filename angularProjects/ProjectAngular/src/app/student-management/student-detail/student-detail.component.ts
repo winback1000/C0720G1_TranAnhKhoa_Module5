@@ -1,5 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IStudent} from "../../model/IStudent";
+import {ActivatedRoute, ParamMap} from "@angular/router";
+import {StudentService} from "../../student.service";
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-student-detail',
@@ -8,22 +11,15 @@ import {IStudent} from "../../model/IStudent";
 })
 export class StudentDetailComponent implements OnInit {
 
-  @Input()
   student: IStudent;
-
-  constructor() { }
+  sub: Subscription;
+  
+  constructor(private activatedRoute: ActivatedRoute, private studentService: StudentService) { }
 
   ngOnInit(): void {
-  }
-  setImage(value) {
-    this.student.image = value;
-  }
-
-  setMark(value: number) {
-    this.student.mark = value;
-  }
-
-  setSize(value: number) {
-    this.student.size = value;
+    this.sub = this.activatedRoute.paramMap.subscribe((paramMap: ParamMap) => {
+      const id= parseInt(paramMap.get('id'));
+      this.student = this.studentService.findById(id);
+    })
   }
 }
